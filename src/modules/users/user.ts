@@ -4,7 +4,7 @@ import { Exclude, plainToInstance } from "class-transformer";
 
 export class User {
     id: number;
-    username: StorageManager;
+    username: string;
     @Exclude()
     password: string;
     datecreated: Date;

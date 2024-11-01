@@ -14,7 +14,8 @@ export class PostsController {
 
     @Get()
     async findAll() {
-        // const posts = await this.posts
-        return 'posts'
+        const posts = await this.postsService.getPosts();
+
+        return posts;
     }
 }

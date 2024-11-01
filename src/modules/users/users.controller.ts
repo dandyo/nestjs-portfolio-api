@@ -18,4 +18,9 @@ export class UsersController {
         const users = await this.usersService.findAll();
         return users;
     }
+
+    @Post('create')
+    createCustomer() {
+        return 'create'
+    }
 }

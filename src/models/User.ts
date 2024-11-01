@@ -1,5 +1,6 @@
 import { Column, Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Post } from "./Post";
+import { Exclude } from "class-transformer";
 
 @Entity({ name: 'users' })
 export class User {
@@ -9,7 +10,7 @@ export class User {
     @Column({ unique: true })
     username: string;
 
-    @Column()
+    @Column({ select: false })
     password: string;
 
     @Column()
