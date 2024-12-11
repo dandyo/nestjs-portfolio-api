@@ -14,6 +14,9 @@ export class User {
     password: string;
 
     @Column()
+    email: string;
+
+    @Column()
     datecreated: Date;
 
     @Column({ nullable: true })
